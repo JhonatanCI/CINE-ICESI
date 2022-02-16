@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.ccRegister;
 
 public class Main extends Application{
 	
@@ -18,6 +19,7 @@ public class Main extends Application{
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			// TODO Auto-generated method stub
+			ccRegister.ccs.add("1006101922");
 			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Start.fxml"));
 			loader.setController(new ControllerStart());
 			Parent parent = (Parent) loader.load();

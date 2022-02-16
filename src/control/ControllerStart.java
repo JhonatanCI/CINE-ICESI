@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.Main;
+import model.ccRegister;
 
 public class ControllerStart {
 
@@ -19,25 +20,22 @@ public class ControllerStart {
 
     @FXML
     private Button startCCBUT;
-    
-    private ControllerRegisterCC cc = new ControllerRegisterCC();
 
     @FXML
     void verifyCC(ActionEvent event) throws Exception {
     	boolean find = false;
     	try {
-    		for (int i = 0; i<cc.getArray().size() && !find;i++) {
-				if(ccTF.getText().equalsIgnoreCase(cc.getArray().get(i))) {
+    		for (int i = 0; i<ccRegister.ccs.size() && !find;i++) {
+				if(ccTF.getText().equalsIgnoreCase(ccRegister.ccs.get(i))) {
 	    			find = true;
 	    			showMenu();
 	    		}
 			}
-    		if(find==false) {
+    		if(!find) {
     			throw new CCNotInTheSystem();
     		}
-    	}  
-    	catch(CCNotInTheSystem ex) {
-    		showExceptionWindow(ex);
+    	}catch(CCNotInTheSystem ex) {
+    		showExceptionWindow();
     	}
     }
     
@@ -51,9 +49,9 @@ public class ControllerStart {
 		stage.show();
     }
     
-    public void showExceptionWindow(Exception ex) throws Exception {
+    public void showExceptionWindow() throws Exception {
     	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/ExceptionWindow.fxml"));
-		loader.setController(new ControllerExceptionWindow(ex));
+		loader.setController(new ControllerExceptionWindow());
 		Parent parent = (Parent) loader.load();
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();
