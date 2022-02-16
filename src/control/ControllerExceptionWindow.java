@@ -9,7 +9,7 @@ public class ControllerExceptionWindow {
     @FXML
     private TextArea textArea;
     
-    public ControllerExceptionWindow(){
+    public ControllerExceptionWindow(Exception ex){
     	
     	textArea.setText("Error, something goes wrong");
     }

@@ -1,9 +1,12 @@
 package control;
 
+import exceptions.MissingInformation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import model.Function;
+import model.FunctionsRegister;
 
 public class ControllerRegisterFunction {
 
@@ -38,7 +41,21 @@ public class ControllerRegisterFunction {
 
     @FXML
     void registerFunction(ActionEvent event) {
-
+    	try{
+    		TextField[] nulls = {nameTF,dayTF,hourHourTF,durationHourTF,roomFT,monthTF,hourMinutesTF,durationMinutesTF};
+    		for (int i=0;i<nulls.length;i++) {
+				if(nulls[i]==null) {
+					throw new MissingInformation();
+				}
+			}
+    		int hourStart = Integer.parseInt(hourHourTF.getText());
+    		int hourMinutes = Integer.parseInt(hourMinutesTF.getText());
+    		int durationHour = Integer.parseInt(durationHourTF.getText());
+    		int durationMinutes = Integer.parseInt(durationMinutesTF.getText());
+    		FunctionsRegister.addfunction(new Function(nameTF.getText(),roomFT.getText(),hourStart,hourMinutes,durationHour,durationMinutes,dayTF.getText(),monthTF.getText()));
+    	}catch(MissingInformation ex) {
+    		
+    	}
     }
 
 }

@@ -35,7 +35,7 @@ public class ControllerStart {
     			throw new CCNotInTheSystem();
     		}
     	}catch(CCNotInTheSystem ex) {
-    		showExceptionWindow();
+    		showExceptionWindow(ex);
     	}
     }
     
@@ -49,9 +49,9 @@ public class ControllerStart {
 		stage.show();
     }
     
-    public void showExceptionWindow() throws Exception {
+    public void showExceptionWindow(Exception ex) throws Exception {
     	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/ExceptionWindow.fxml"));
-		loader.setController(new ControllerExceptionWindow());
+		loader.setController(new ControllerExceptionWindow(ex));
 		Parent parent = (Parent) loader.load();
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();
