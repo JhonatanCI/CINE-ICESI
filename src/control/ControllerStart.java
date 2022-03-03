@@ -47,6 +47,7 @@ public class ControllerStart {
 		Stage stage = new Stage();
 		stage.setScene(scene);
 		stage.show();
+		close();
     }
     
     public void showExceptionWindow(Exception ex) throws Exception {
@@ -57,6 +58,12 @@ public class ControllerStart {
 		Stage stage = new Stage();
 		stage.setScene(scene);
 		stage.show();
+		close();
     }
+    
+    public void close() {
+		Stage stage = (Stage) startCCBUT.getScene().getWindow();
+		stage.close();
+	}
 
 }

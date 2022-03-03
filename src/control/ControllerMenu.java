@@ -15,6 +15,9 @@ public class ControllerMenu {
 
     @FXML
     private Button registerPersonBUT;
+    
+    @FXML
+    private Button registerCCBut;
 
     @FXML
     void RegisterFunction(ActionEvent event) throws Exception{
@@ -25,6 +28,7 @@ public class ControllerMenu {
 		Stage stage = new Stage();
 		stage.setScene(scene);
 		stage.show();
+		close();
     }
 
     @FXML
@@ -36,5 +40,35 @@ public class ControllerMenu {
 		Stage stage = new Stage();
 		stage.setScene(scene);
 		stage.show();
+		close();
+    }
+    
+    @FXML
+    void addCC(ActionEvent event) throws Exception {
+    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/RegisterCC.fxml"));
+		loader.setController(new ControllerRegisterCC());
+		Parent parent = (Parent) loader.load();
+		Scene scene = new Scene(parent);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.show();
+		close();
+    }
+    
+    @FXML
+    void close(ActionEvent event) throws Exception{
+    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Start.fxml"));
+		loader.setController(new ControllerStart());
+		Parent parent = (Parent) loader.load();
+		Scene scene = new Scene(parent);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.show();
+		close();
+    }
+    
+    public void close() {
+    	Stage stage = (Stage) registerCCBut.getScene().getWindow();
+		stage.close();
     }
 }

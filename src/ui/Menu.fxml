@@ -3,10 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="funcRegisterBUT" layoutX="232.0" layoutY="120.0" mnemonicParsing="false" onAction="#RegisterFunction" text="Register Function" />
       <Button fx:id="registerPersonBUT" layoutX="232.0" layoutY="185.0" mnemonicParsing="false" onAction="#RegisterPerson" text="Register a person" />
+      <Button fx:id="registerCCBut" layoutX="230.0" layoutY="259.0" mnemonicParsing="false" onAction="#addCC" prefHeight="31.0" prefWidth="136.0" text="Register CC" />
+      <Button fx:id="returnBut" layoutX="22.0" layoutY="355.0" mnemonicParsing="false" onAction="#close" text="Return" />
    </children>
 </AnchorPane>

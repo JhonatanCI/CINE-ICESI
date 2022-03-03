@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.ccRegister;
 
 public class ControllerRegisterCC {
@@ -25,9 +26,15 @@ public class ControllerRegisterCC {
 				}
 			}
     		ccRegister.ccs.add(registerTF.getText());
+    		close();
     	}catch(NotValidCC ex) {
     		
     	}
+    }
+    
+    public void close() {
+    	Stage stage = (Stage) registerBUT.getScene().getWindow();
+		stage.close();
     }
     
 
