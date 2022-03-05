@@ -10,7 +10,7 @@ import model.ccRegister;
 
 public class Main extends Application{
 	
-
+	public ccRegister data = new ccRegister();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
@@ -19,6 +19,7 @@ public class Main extends Application{
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			// TODO Auto-generated method stub
+			data.loadJSON();
 			ccRegister.ccs.add("1006101922");
 			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Start.fxml"));
 			loader.setController(new ControllerStart());
