@@ -18,7 +18,7 @@ public class ccRegister implements Serializable{
 	
 	public void saveJSON() {
 		Gson gson = new Gson();
-		String json = gson.toJson(this);
+		String json = gson.toJson(ccs);
 		System.out.println(json);
 		File file = new File("data/data.json");
 		try {
@@ -47,8 +47,9 @@ public class ccRegister implements Serializable{
 			}
 			//String = Obj
 			Gson gson = new Gson();
-			ccRegister data = gson.fromJson(json, ccRegister.class);
-			ccs = data.ccs;
+			String[] data = gson.fromJson(json, String[].class);
+			for(String d : data)
+			ccs.add(d);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
