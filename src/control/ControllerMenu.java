@@ -33,8 +33,8 @@ public class ControllerMenu {
 
     @FXML
     void RegisterPerson(ActionEvent event) throws Exception {
-    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/RegisterPerson.fxml"));
-		loader.setController(new ControllerRegisterPerson());
+    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/FunctionsTable.fxml"));
+		loader.setController(new ControllerFunctionTable());
 		Parent parent = (Parent) loader.load();
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();

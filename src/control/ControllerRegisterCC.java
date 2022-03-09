@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -49,7 +50,11 @@ public class ControllerRegisterCC{
     		close();
     		callStart();
     	}catch(NotValidCC ex) {
-    		
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+		    alert.setHeaderText(null);
+		    alert.setTitle("ERROR");
+		    alert.setContentText("The ID writed is not valid");
+		    alert.showAndWait();
     	} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,7 +67,6 @@ public class ControllerRegisterCC{
     }
     
     public void callStart() throws IOException {
-    	ccRegister.ccs.add("1006101922");
 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Start.fxml"));
 		loader.setController(new ControllerStart());
 		Parent parent = (Parent) loader.load();

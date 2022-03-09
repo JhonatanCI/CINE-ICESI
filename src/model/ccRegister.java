@@ -7,19 +7,17 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
-public class ccRegister implements Serializable{
+public class ccRegister {
 	
 	public static ArrayList<String> ccs = new ArrayList<>();
 	
 	public void saveJSON() {
 		Gson gson = new Gson();
 		String json = gson.toJson(ccs);
-		System.out.println(json);
 		File file = new File("data/data.json");
 		try {
 			FileOutputStream fos = new FileOutputStream(file);

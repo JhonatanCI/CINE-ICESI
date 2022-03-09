@@ -6,11 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.FunctionsRegister;
 import model.ccRegister;
 
 public class Main extends Application{
 	
 	public ccRegister data = new ccRegister();
+	public FunctionsRegister dataFun = new FunctionsRegister();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
@@ -20,7 +22,7 @@ public class Main extends Application{
 		public void start(Stage primaryStage) throws Exception {
 			// TODO Auto-generated method stub
 			data.loadJSON();
-			ccRegister.ccs.add("1006101922");
+			dataFun.loadJSON();
 			FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Start.fxml"));
 			loader.setController(new ControllerStart());
 			Parent parent = (Parent) loader.load();

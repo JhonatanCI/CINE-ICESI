@@ -14,4 +14,9 @@ public class Hour {
 	public int getMinutes() {
 		return minutes;
 	}
+	
+	public int calculateFinish(int duration) {
+		int out = hour+duration;
+		return out;
+	}
 }

@@ -1,5 +1,9 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Function {
 	private String name;
 	private  String room;
@@ -10,7 +14,13 @@ public class Function {
     public Function(String name, String room,int hourHour,int hourMinutes,int durationHour,int durationMinutes,String day,String month) {
     	this.name = name;
     	this.room = room;
-    	this.date = new Date(day,month);
+    	SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+    	try {
+			this.date = sdf.parse(day+"-"+month+"-2022");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	this.hour = new Hour(hourHour, hourMinutes);
     	this.duration = new Hour(durationHour,durationMinutes);
     }
