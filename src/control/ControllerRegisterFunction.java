@@ -13,8 +13,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.Main;
+import model.Bienestar;
 import model.Function;
-import model.FunctionsRegister;
+
 
 public class ControllerRegisterFunction {
 
@@ -45,10 +46,12 @@ public class ControllerRegisterFunction {
     @FXML
     private Button registerBUT;
     
+    private Bienestar bienestar;
     
 
     @FXML
     void registerFunction(ActionEvent event) throws IOException {
+    	bienestar = new Bienestar();
     	try{
     		TextField[] nulls = {nameTF,dayTF,hourHourTF,durationHourTF,roomFT,monthTF,hourMinutesTF,durationMinutesTF};
     		for (int i=0;i<nulls.length;i++) {
@@ -61,8 +64,8 @@ public class ControllerRegisterFunction {
     		int durationHour = Integer.parseInt(durationHourTF.getText());
     		int durationMinutes = Integer.parseInt(durationMinutesTF.getText());
    
-    		FunctionsRegister.addfunction(new Function(nameTF.getText(),roomFT.getText(),hourStart,hourMinutes,durationHour,durationMinutes,dayTF.getText(),monthTF.getText()));
-    		new FunctionsRegister().saveJSON();
+    		bienestar.addfunction(nameTF.getText(),roomFT.getText(),hourStart,hourMinutes,durationHour,durationMinutes,dayTF.getText(),monthTF.getText());
+    		bienestar.saveJSON();
     		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Menu.fxml"));
     		loader.setController(new ControllerMenu());
     		Parent parent = (Parent) loader.load();

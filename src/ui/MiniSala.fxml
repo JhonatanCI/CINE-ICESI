@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="304.0" layoutY="14.0" text="Mini Sala">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="A01BTN" layoutX="113.0" layoutY="142.0" mnemonicParsing="false" onAction="#addChair" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A01" />
+      <Button fx:id="A02BTN" layoutX="194.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A02" />
+      <Button fx:id="A03" layoutX="277.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A03" />
+      <Button fx:id="A04" layoutX="360.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A04" />
+      <Button fx:id="A05" layoutX="439.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A05" />
+      <Button fx:id="A06" layoutX="516.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A06" />
+      <Button fx:id="A07" layoutX="597.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A07" />
+      <Button fx:id="B01" layoutX="113.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B01" />
+      <Button fx:id="B02" layoutX="194.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B02" />
+      <Button fx:id="B03" layoutX="277.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B03" />
+      <Button fx:id="B04" layoutX="360.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B04" />
+      <Button fx:id="B05" layoutX="439.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B05" />
+      <Button fx:id="B06" layoutX="516.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B06" />
+      <Button fx:id="B07" layoutX="597.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B07" />
+      <Button fx:id="C01" layoutX="113.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C01" />
+      <Button fx:id="C02" layoutX="194.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C02" />
+      <Button fx:id="C03" layoutX="277.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C03" />
+      <Button fx:id="C04" layoutX="360.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C04" />
+      <Button fx:id="C05" layoutX="439.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C05" />
+      <Button fx:id="C06" layoutX="516.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C06" />
+      <Button fx:id="C07" layoutX="597.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C07" />
+      <Button fx:id="D01" layoutX="113.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D01" />
+      <Button fx:id="D02" layoutX="194.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D02" />
+      <Button fx:id="D03" layoutX="277.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D03" />
+      <Button fx:id="D04" layoutX="360.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D04" />
+      <Button fx:id="D05" layoutX="439.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D05" />
+      <Button fx:id="D06" layoutX="516.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D06" />
+      <Button fx:id="D07" layoutX="597.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D07" />
+   </children>
+</AnchorPane>

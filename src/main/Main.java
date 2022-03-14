@@ -6,13 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.FunctionsRegister;
+import model.Bienestar;
 import model.ccRegister;
 
 public class Main extends Application{
 	
 	public ccRegister data = new ccRegister();
-	public FunctionsRegister dataFun = new FunctionsRegister();
+	public Bienestar dataFun = new Bienestar();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);

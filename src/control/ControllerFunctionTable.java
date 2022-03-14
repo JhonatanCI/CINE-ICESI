@@ -1,19 +1,24 @@
 package control;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import main.Main;
+import model.Bienestar;
 import model.Function;
-import model.FunctionsRegister;
 import model.Hour;
 
 public class ControllerFunctionTable implements Initializable{
@@ -56,10 +61,24 @@ public class ControllerFunctionTable implements Initializable{
 		HourCOL.setCellValueFactory(new PropertyValueFactory<>("hour"));
 		durationCOL.setCellValueFactory(new PropertyValueFactory<>("duration"));
 		
-		functionTable.setItems(FunctionsRegister.functions);
+		functionTable.setItems(Bienestar.functions);
 		
 		functionTable.setOnMouseClicked(event->{Function stClicked = functionTable.getSelectionModel().getSelectedItem();
-			System.out.println(stClicked.getName());
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/RegisterPerson.fxml"));
+		loader.setController(new ControllerRegisterPerson());
+		Parent parent;
+		try {
+			parent = (Parent) loader.load();
+			Scene scene = new Scene(parent);
+			Stage stage = new Stage();
+			stage.setScene(scene);
+			stage.show();
+			close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		});
 	}
 

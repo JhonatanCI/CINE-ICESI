@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
@@ -14,13 +15,27 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
-public class FunctionsRegister {
+public class Bienestar {
+	
+	private Sala miniSala;
+	private Sala sala;
 	public static ObservableList<Function> functions = FXCollections.observableArrayList();
 	
-	public static void addfunction(Function fun) {
+	
+	public Bienestar(Sala miniSala, Sala sala) {
+		this.miniSala = miniSala;
+		this.sala = sala;
+	}
+	
+	public Bienestar() {
+		
+	}
+	
+	public static void addfunction(String name, String room,int hourHour,int hourMinutes,int durationHour,int durationMinutes,String day,String month) {
+		Function f = new Function(name, room, hourHour, hourMinutes, durationHour, durationMinutes, day, month);
 		boolean pass = true;
-		for ( Function i : functions) {
-			if(i.getName().equalsIgnoreCase(fun.getName())) {
+		for (Function fun : functions) {
+			if(f.getName().equalsIgnoreCase(fun.getName())) {
 				pass = false;
 				Alert alert = new Alert(Alert.AlertType.ERROR);
 			    alert.setHeaderText(null);
@@ -28,8 +43,8 @@ public class FunctionsRegister {
 			    alert.setContentText("The name is already using please write other name");
 			    alert.showAndWait();
 			}else {
-				if(i.getDate().getTime()==fun.getDate().getTime()&&i.getroom().equals(fun.getroom())&&(i.getHour().getHour()<=fun.getHour().getHour()||
-						i.getHour().calculateFinish(i.getDuration().getHour())>=fun.getHour().calculateFinish(fun.getDuration().getHour()))) {
+				if(fun.getDate().getTime()==f.getDate().getTime()&&fun.getroom().equals(f.getroom())&&(fun.getHour().getHour()<=f.getHour().getHour()||
+						fun.getHour().calculateFinish(fun.getDuration().getHour())>=f.getHour().calculateFinish(f.getDuration().getHour()))) {
 					pass = false;
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 				    alert.setHeaderText(null);
@@ -40,9 +55,8 @@ public class FunctionsRegister {
 			}
 			
 		}
-		
 		if(pass) {
-			functions.add(fun);
+			functions.add(f);
 		}
 		
 	}
@@ -86,4 +100,26 @@ public class FunctionsRegister {
 		}
 		
 	}
+
+	public Sala getMiniSala() {
+		return miniSala;
+	}
+
+	public void setMiniSala(Sala miniSala) {
+		this.miniSala = miniSala;
+	}
+
+	public Sala getSala() {
+		return sala;
+	}
+
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+
+	
+	
+	
+	
+	
 }
