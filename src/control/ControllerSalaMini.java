@@ -154,45 +154,131 @@ public class ControllerSalaMini implements Initializable {
     }
     
     public void changeColorB1() {
-    b1.setOnMouseClicked(e -> { 
-        b1.setFill(Color.BLUE);
-    });
-    }
+        b1.setOnMouseClicked(e -> { 
+            b1.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorB2() {
+        b2.setOnMouseClicked(e -> { 
+            b2.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorB3() {
+        b3.setOnMouseClicked(e -> { 
+            b3.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorB4() {
+        b4.setOnMouseClicked(e -> { 
+            b4.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorB5() {
+        b5.setOnMouseClicked(e -> { 
+            b5.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorB6() {
+        b6.setOnMouseClicked(e -> { 
+            b6.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorB7() {
+        b7.setOnMouseClicked(e -> { 
+            b7.setFill(Color.BLUE);
+        });
+        }
     
-    public void changeColorB2() {
-    b2.setOnMouseClicked(e -> { 
-        b2.setFill(Color.BLUE);
-    });
-    }
-    
-    public void changeColorB3() {
-    b3.setOnMouseClicked(e -> { 
-        b3.setFill(Color.BLUE);
-    });
-    }
-    
-    public void changeColorB4() {
-    b4.setOnMouseClicked(e -> { 
-        b4.setFill(Color.BLUE);
-    });
-    }
-    
-    public void changeColorB5() {
-    b5.setOnMouseClicked(e -> { 
-        b5.setFill(Color.BLUE);
-    });
-    }
-    
-    public void changeColorB6() {
-    b6.setOnMouseClicked(e -> { 
-        b6.setFill(Color.BLUE);
-    });
-    }
-    
-    public void changeColorB7() {
-    b7.setOnMouseClicked(e -> { 
-        b7.setFill(Color.BLUE);
-    });
-    }
+
+    public void changeColorC1() {
+        c1.setOnMouseClicked(e -> { 
+            c1.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorC2() {
+        c2.setOnMouseClicked(e -> { 
+            c2.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorC3() {
+        c3.setOnMouseClicked(e -> { 
+            c3.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorC4() {
+        c4.setOnMouseClicked(e -> { 
+            c4.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorC5() {
+        c5.setOnMouseClicked(e -> { 
+            c5.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorC6() {
+        c6.setOnMouseClicked(e -> { 
+            c6.setFill(Color.BLUE);
+        });
+        }
+        
+        public void changeColorC7() {
+        c7.setOnMouseClicked(e -> { 
+            c7.setFill(Color.BLUE);
+        });
+        }
+        
+        
+        public void changeColorD1() {
+            d1.setOnMouseClicked(e -> { 
+                d1.setFill(Color.BLUE);
+            });
+            }
+            
+            public void changeColorD2() {
+            d2.setOnMouseClicked(e -> { 
+                d2.setFill(Color.BLUE);
+            });
+            }
+            
+            public void changeColorD3() {
+            d3.setOnMouseClicked(e -> { 
+                d3.setFill(Color.BLUE);
+            });
+            }
+            
+            public void changeColorD4() {
+            d4.setOnMouseClicked(e -> { 
+                d4.setFill(Color.BLUE);
+            });
+            }
+            
+            public void changeColorD5() {
+            d5.setOnMouseClicked(e -> { 
+                d5.setFill(Color.BLUE);
+            });
+            }
+            
+            public void changeColorD6() {
+            d6.setOnMouseClicked(e -> { 
+                d6.setFill(Color.BLUE);
+            });
+            }
+            
+            public void changeColorD7() {
+            d7.setOnMouseClicked(e -> { 
+                d7.setFill(Color.BLUE);
+            });
+            }
 
 }
