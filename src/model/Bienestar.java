@@ -22,6 +22,14 @@ public class Bienestar {
 	public static ObservableList<Function> functions = FXCollections.observableArrayList();
 	
 	
+	public static ObservableList<Function> getFunctions() {
+		return functions;
+	}
+
+	public static void setFunctions(ObservableList<Function> functions) {
+		Bienestar.functions = functions;
+	}
+
 	public Bienestar(Sala miniSala, Sala sala) {
 		this.miniSala = miniSala;
 		this.sala = sala;

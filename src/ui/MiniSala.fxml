@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
-
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -13,33 +16,63 @@
             <Font size="35.0" />
          </font>
       </Label>
-      <Button fx:id="A01BTN" layoutX="113.0" layoutY="142.0" mnemonicParsing="false" onAction="#addChair" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A01" />
-      <Button fx:id="A02BTN" layoutX="194.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A02" />
-      <Button fx:id="A03" layoutX="277.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A03" />
-      <Button fx:id="A04" layoutX="360.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A04" />
-      <Button fx:id="A05" layoutX="439.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A05" />
-      <Button fx:id="A06" layoutX="516.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A06" />
-      <Button fx:id="A07" layoutX="597.0" layoutY="142.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="A07" />
-      <Button fx:id="B01" layoutX="113.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B01" />
-      <Button fx:id="B02" layoutX="194.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B02" />
-      <Button fx:id="B03" layoutX="277.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B03" />
-      <Button fx:id="B04" layoutX="360.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B04" />
-      <Button fx:id="B05" layoutX="439.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B05" />
-      <Button fx:id="B06" layoutX="516.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B06" />
-      <Button fx:id="B07" layoutX="597.0" layoutY="208.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="B07" />
-      <Button fx:id="C01" layoutX="113.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C01" />
-      <Button fx:id="C02" layoutX="194.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C02" />
-      <Button fx:id="C03" layoutX="277.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C03" />
-      <Button fx:id="C04" layoutX="360.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C04" />
-      <Button fx:id="C05" layoutX="439.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C05" />
-      <Button fx:id="C06" layoutX="516.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C06" />
-      <Button fx:id="C07" layoutX="597.0" layoutY="270.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="C07" />
-      <Button fx:id="D01" layoutX="113.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D01" />
-      <Button fx:id="D02" layoutX="194.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D02" />
-      <Button fx:id="D03" layoutX="277.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D03" />
-      <Button fx:id="D04" layoutX="360.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D04" />
-      <Button fx:id="D05" layoutX="439.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D05" />
-      <Button fx:id="D06" layoutX="516.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D06" />
-      <Button fx:id="D07" layoutX="597.0" layoutY="332.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="53.0" style="-fx-background-color: #CDE3F9;" text="D07" />
+      <GridPane layoutX="135.0" layoutY="134.0" prefHeight="238.0" prefWidth="531.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="78.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="83.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="77.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="73.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="77.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="80.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="69.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="75.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.0" minHeight="4.0" prefHeight="56.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fx:id="a1" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="a2" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+            <Circle fx:id="a3" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+            <Circle fx:id="a4" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" />
+            <Circle fx:id="a5" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" />
+            <Circle fx:id="a6" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" />
+            <Circle fx:id="a7" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" />
+            <Circle fx:id="b2" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Circle fx:id="b1" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="1" />
+            <Circle fx:id="b3" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Circle fx:id="b4" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Circle fx:id="b5" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Circle fx:id="c1" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="2" />
+            <Circle fx:id="b6" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Circle fx:id="b7" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Circle fx:id="d7" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Circle fx:id="d6" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Circle fx:id="d5" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Circle fx:id="d4" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Circle fx:id="d3" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Circle fx:id="d2" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Circle fx:id="d1" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="3" />
+            <Circle fx:id="c7" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Circle fx:id="c6" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Circle fx:id="c5" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Circle fx:id="c2" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Circle fx:id="c3" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Circle fx:id="c4" fill="#bbc8d3" onMouseClicked="#changeColor" radius="24.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Text layoutX="153.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="232.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="314.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+      <Text layoutX="386.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+      <Text layoutX="462.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+      <Text layoutX="537.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+      <Text layoutX="611.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+      <Text layoutX="115.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D" />
+      <Text layoutX="111.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+      <Text layoutX="111.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" />
+      <Text layoutX="111.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" />
    </children>
 </AnchorPane>
