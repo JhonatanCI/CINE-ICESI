@@ -2,6 +2,8 @@ package control;
 
 
 
+import java.io.IOException;
+
 import exceptions.MissingInformation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,8 +20,13 @@ import model.Function;
 
 
 public class ControllerRegisterPerson {
+	
+	Function f;
+    public ControllerRegisterPerson(Function f) {
+		this.f = f;
+	}
 
-    @FXML
+	@FXML
     private TextField idPersonTXF;
 
     @FXML
@@ -30,22 +37,41 @@ public class ControllerRegisterPerson {
 
     @FXML
     private Button backBTN;
-
-    private Bienestar bienestar;
     
 
     @FXML
-    void goBack_table(ActionEvent event) {
-    	
+    void goBack_table(ActionEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/FunctionsTable.fxml"));
+		loader.setController(new ControllerFunctionTable());
+		Parent parent = (Parent) loader.load();
+		Scene scene = new Scene(parent);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.show();
+		close();
     }
     
     @FXML
-    void addPerson(ActionEvent event) {
-    	bienestar = new Bienestar();
-    	for(int i = 0; i < Bienestar.functions.size();i++) {
-    		bienestar.functions.get(i).addPerson(idPersonTXF.getText(), fullNameTXF.getText());
+    void addPerson(ActionEvent event) throws IOException {
+    	boolean conti = true;
+    	for(int i = 0; i < Bienestar.functions.size()&& conti;i++) {
+    		if(Bienestar.functions.get(i)==f) {
+    			if(Bienestar.functions.get(i).addPerson(idPersonTXF.getText(), fullNameTXF.getText())) {
+    	        	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/SelectSala.fxml"));
+    	    		loader.setController(new ControllerSelectSala());
+    	    		Parent parent;
+    	    		parent = (Parent) loader.load();
+    	    		Scene scene = new Scene(parent);
+    	    		Stage stage = new Stage();
+    	    		stage.setScene(scene);
+    	    		stage.show();
+    	    		close();
+    	    	}else {
+    	    		conti = false;
+    	    	}
+    		}
     	}
-    	close();
+    	
     	
     }
     

@@ -22,12 +22,12 @@ public class Function {
     private Date date;
     private Hour hour;
     private Hour duration;
-    public ArrayList<Person> persons = new ArrayList<>();
+    public static ArrayList<Person> persons = new ArrayList<>();
+   
     
     public Function(String name, String room,int hourHour,int hourMinutes,int durationHour,int durationMinutes,String day,String month) {
     	this.name = name;
     	this.room = room;
-    	persons = new ArrayList<Person>();
     	SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
     	try {
 			this.date = sdf.parse(day+"-"+month+"-2022");
@@ -40,27 +40,67 @@ public class Function {
     }
     
     
-    public void addPerson(String id, String fullName) {
+    public boolean addPerson(String id, String fullName) {
     	Person p = new Person(id, fullName);
-    	persons.add(p);
     	boolean pass = true;
-    	try {
-		for (int i = 0; i < persons.size();i++) {
-			if(persons.get(i).getId().equalsIgnoreCase(p.getId())) {
-				pass = false;
-				Alert alert = new Alert(Alert.AlertType.ERROR);
-			    alert.setHeaderText(null);
-			    alert.setTitle("Error the user already exist");
-			    alert.showAndWait();
-			}else {
-				persons.add(p);
+    	if(!id.equals("") || !fullName.equals("")) {
+	    	
+			for (int i = 0; i < persons.size();i++) {
+				if(persons.get(i).getId().equalsIgnoreCase(p.getId())) {
+					pass = false;
+					Alert alert = new Alert(Alert.AlertType.ERROR);
+				    alert.setHeaderText(null);
+				    alert.setTitle("Error the user already exist");
+				    alert.setContentText("Error the user already exist");
+				    alert.showAndWait();
+				}else {
+					persons.add(p);
+					}
 				}
-			}}catch(NullPointerException ex) {
-				ex.printStackTrace();
+			
+    	}else {
+    			pass = false;
+				Alert alert = new Alert(Alert.AlertType.WARNING);
+			    alert.setHeaderText(null);
+			    alert.setTitle("Please write in all the spaces");
+			    alert.setContentText("Please write in all the spaces");
+			    alert.showAndWait();
 			}
+    	return pass;
     }
     
-    public void saveJSON() {
+    public String getRoom() {
+		return room;
+	}
+
+
+	public void setRoom(String room) {
+		this.room = room;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+
+	public void setHour(Hour hour) {
+		this.hour = hour;
+	}
+
+
+	public void setDuration(Hour duration) {
+		this.duration = duration;
+	}
+
+
+	public void saveJSON() {
 		Gson gson = new Gson();
 		String json = gson.toJson(persons);
 		File file = new File("data/dataPer.json");

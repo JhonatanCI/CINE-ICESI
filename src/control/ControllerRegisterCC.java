@@ -53,7 +53,7 @@ public class ControllerRegisterCC{
     		Alert alert = new Alert(Alert.AlertType.ERROR);
 		    alert.setHeaderText(null);
 		    alert.setTitle("ERROR");
-		    alert.setContentText("The ID writed is not valid");
+		    alert.setContentText("The ID writed is not validt");
 		    alert.showAndWait();
     	} catch (IOException e) {
 			// TODO Auto-generated catch block

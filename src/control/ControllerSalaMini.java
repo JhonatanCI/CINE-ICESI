@@ -13,6 +13,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 import model.Bienestar;
 
 public class ControllerSalaMini implements Initializable {
@@ -279,6 +280,11 @@ public class ControllerSalaMini implements Initializable {
             d7.setOnMouseClicked(e -> { 
                 d7.setFill(Color.BLUE);
             });
+            }
+            
+            public void close() {
+            	Stage stage = (Stage)d7.getScene().getWindow();
+        		stage.close();
             }
 
 }

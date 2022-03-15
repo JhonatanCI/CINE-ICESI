@@ -24,8 +24,8 @@ public class ControllerSelectSala {
 
     @FXML
     void goBack_RP(ActionEvent event)throws Exception {
-    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/RegisterPerson.fxml"));
-		loader.setController(new ControllerRegisterPerson());
+    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Menu.fxml"));
+		loader.setController(new ControllerMenu());
 		Parent parent = (Parent) loader.load();
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();
