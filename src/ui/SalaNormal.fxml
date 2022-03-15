@@ -1,8 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="saveBTN" layoutX="360.0" layoutY="541.0" mnemonicParsing="false" onAction="#saveAPerson" style="-fx-background-color: #D8FBB2;" text="save">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="368.0" layoutY="14.0" prefHeight="38.0" prefWidth="57.0" text=" Sala">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Circle fx:id="a1" fill="#bbc8d3" layoutX="170.0" layoutY="106.0" onMouseClicked="#changeColorA1" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="a2" fill="#bbc8d3" layoutX="246.0" layoutY="106.0" onMouseClicked="#changeColorA2" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="a3" fill="#bbc8d3" layoutX="327.0" layoutY="106.0" onMouseClicked="#changeColorA3" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="a4" fill="#bbc8d3" layoutX="400.0" layoutY="106.0" onMouseClicked="#changeColorA4" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="a5" fill="#bbc8d3" layoutX="475.0" layoutY="106.0" onMouseClicked="#changeColorA5" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="a6" fill="#bbc8d3" layoutX="546.0" layoutY="106.0" onMouseClicked="#changeColorA6" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="a7" fill="#bbc8d3" layoutX="622.0" layoutY="106.0" onMouseClicked="#changeColorA7" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b2" fill="#bbc8d3" layoutX="246.0" layoutY="164.0" onMouseClicked="#changeColorB2" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b1" fill="#bbc8d3" layoutX="170.0" layoutY="164.0" onMouseClicked="#changeColorB1" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b3" fill="#bbc8d3" layoutX="327.0" layoutY="164.0" onMouseClicked="#changeColorB3" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b4" fill="#bbc8d3" layoutX="400.0" layoutY="164.0" onMouseClicked="#changeColorB4" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b5" fill="#bbc8d3" layoutX="475.0" layoutY="164.0" onMouseClicked="#changeColorB5" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c1" fill="#bbc8d3" layoutX="170.0" layoutY="228.0" onMouseClicked="#changeColorC1" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b6" fill="#bbc8d3" layoutX="546.0" layoutY="164.0" onMouseClicked="#changeColorB6" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="b7" fill="#bbc8d3" layoutX="622.0" layoutY="164.0" onMouseClicked="#changeColorB7" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d7" fill="#bbc8d3" layoutX="622.0" layoutY="288.0" onMouseClicked="#changeColorD7" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d6" fill="#bbc8d3" layoutX="546.0" layoutY="288.0" onMouseClicked="#changeColorD6" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d5" fill="#bbc8d3" layoutX="475.0" layoutY="288.0" onMouseClicked="#changeColorD5" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d4" fill="#bbc8d3" layoutX="400.0" layoutY="288.0" onMouseClicked="#changeColorD4" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d3" fill="#bbc8d3" layoutX="327.0" layoutY="288.0" onMouseClicked="#changeColorD3" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d2" fill="#bbc8d3" layoutX="246.0" layoutY="288.0" onMouseClicked="#changeColorD2" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="d1" fill="#bbc8d3" layoutX="170.0" layoutY="288.0" onMouseClicked="#changeColorD1" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c7" fill="#bbc8d3" layoutX="622.0" layoutY="228.0" onMouseClicked="#changeColorC7" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c6" fill="#bbc8d3" layoutX="546.0" layoutY="228.0" onMouseClicked="#changeColorC6" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c5" fill="#bbc8d3" layoutX="475.0" layoutY="228.0" onMouseClicked="#changeColorC5" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c2" fill="#bbc8d3" layoutX="246.0" layoutY="228.0" onMouseClicked="#changeColorC2" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c3" fill="#bbc8d3" layoutX="327.0" layoutY="228.0" onMouseClicked="#changeColorC3" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="c4" fill="#bbc8d3" layoutX="400.0" layoutY="228.0" onMouseClicked="#changeColorC4" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e1" fill="#bbc8d3" layoutX="170.0" layoutY="373.0" onMouseClicked="#changeColorC1" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f7" fill="#bbc8d3" layoutX="622.0" layoutY="433.0" onMouseClicked="#changeColorD7" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f6" fill="#bbc8d3" layoutX="546.0" layoutY="433.0" onMouseClicked="#changeColorD6" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f5" fill="#bbc8d3" layoutX="475.0" layoutY="433.0" onMouseClicked="#changeColorD5" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f4" fill="#bbc8d3" layoutX="400.0" layoutY="433.0" onMouseClicked="#changeColorD4" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f3" fill="#bbc8d3" layoutX="327.0" layoutY="433.0" onMouseClicked="#changeColorD3" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f2" fill="#bbc8d3" layoutX="246.0" layoutY="433.0" onMouseClicked="#changeColorD2" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="f1" fill="#bbc8d3" layoutX="170.0" layoutY="433.0" onMouseClicked="#changeColorD1" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e7" fill="#bbc8d3" layoutX="622.0" layoutY="373.0" onMouseClicked="#changeColorC7" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e6" fill="#bbc8d3" layoutX="546.0" layoutY="373.0" onMouseClicked="#changeColorC6" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e5" fill="#bbc8d3" layoutX="475.0" layoutY="373.0" onMouseClicked="#changeColorC5" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e2" fill="#bbc8d3" layoutX="246.0" layoutY="373.0" onMouseClicked="#changeColorC2" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e3" fill="#bbc8d3" layoutX="327.0" layoutY="373.0" onMouseClicked="#changeColorC3" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="e4" fill="#bbc8d3" layoutX="400.0" layoutY="373.0" onMouseClicked="#changeColorC4" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
 </AnchorPane>
-
