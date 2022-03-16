@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 import main.Main;
 import model.Bienestar;
 import model.Function;
+import model.Person;
 
 
 public class ControllerRegisterPerson {
@@ -56,9 +57,10 @@ public class ControllerRegisterPerson {
     	boolean conti = true;
     	for(int i = 0; i < Bienestar.functions.size()&& conti;i++) {
     		if(Bienestar.functions.get(i)==f) {
-    			if(Bienestar.functions.get(i).addPerson(idPersonTXF.getText(), fullNameTXF.getText())) {
+    			Person p = new Person(idPersonTXF.getText(), fullNameTXF.getText());
+    			if(Bienestar.functions.get(i).addPerson(p)) {
     	        	FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/SelectSala.fxml"));
-    	    		loader.setController(new ControllerSelectSala());
+    	    		loader.setController(new ControllerSelectSala(p));
     	    		Parent parent;
     	    		parent = (Parent) loader.load();
     	    		Scene scene = new Scene(parent);

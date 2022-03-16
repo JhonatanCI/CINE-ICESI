@@ -40,10 +40,9 @@ public class Function {
     }
     
     
-    public boolean addPerson(String id, String fullName) {
-    	Person p = new Person(id, fullName);
+    public boolean addPerson(Person p) {
     	boolean pass = true;
-    	if(!id.equals("") || !fullName.equals("")) {
+    	if(!p.getFullName().equals("") || !p.getId().equals("")) {
 	    	
 			for (int i = 0; i < persons.size();i++) {
 				if(persons.get(i).getId().equalsIgnoreCase(p.getId())) {
