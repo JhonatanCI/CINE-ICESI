@@ -1,5 +1,6 @@
 package control;
 
+<<<<<<< HEAD
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -280,6 +281,17 @@ public class ControllerSalaNormal implements Initializable {
                 d7.setFill(Color.BLUE);
             });
             }
+=======
+import model.Person;
+
+public class ControllerSalaNormal {
+	
+	Person p;
+
+	public ControllerSalaNormal(Person p) {
+		this.p=p;
+	}
+>>>>>>> 7e5739ecdaadee1ba5af70a19c7e48d13f9ce8f4
 
 }
 

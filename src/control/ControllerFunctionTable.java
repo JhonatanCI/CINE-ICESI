@@ -64,8 +64,8 @@ public class ControllerFunctionTable implements Initializable{
 		functionTable.setItems(Bienestar.functions);
 		
 		functionTable.setOnMouseClicked(event->{Function stClicked = functionTable.getSelectionModel().getSelectedItem();
-		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/SelectSala.fxml"));
-		loader.setController(new ControllerSelectSala());
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/RegisterPerson.fxml"));
+		loader.setController(new ControllerRegisterPerson(stClicked));
 		Parent parent;
 		try {
 			parent = (Parent) loader.load();

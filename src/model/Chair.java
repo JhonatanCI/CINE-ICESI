@@ -5,9 +5,8 @@ public class Chair {
 	private String ubication;
 	private boolean isEmpty;
 	
-	public Chair(String ubication, boolean status) {
+	public Chair(String ubication) {
 		this.ubication = ubication;
-		this.isEmpty = isEmpty;
 	}
 
 	public String getUbication() {

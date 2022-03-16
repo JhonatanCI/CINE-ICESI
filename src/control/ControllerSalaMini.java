@@ -13,7 +13,11 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 import model.Bienestar;
+import model.Chair;
+import model.Function;
+import model.Person;
 
 public class ControllerSalaMini implements Initializable {
 	
@@ -102,12 +106,29 @@ public class ControllerSalaMini implements Initializable {
     private Circle c4;
 
     static ArrayList<String> selectedSeats;
+   
     
-    private Bienestar bienestar;
+    Person p;
     
-    @Override
+    public ControllerSalaMini(Person p) {
+		this.p=p;
+	}
+    
+    String[] ad = {"A","B","B","C","D"};
+  
+	@Override
     public void initialize(URL location, ResourceBundle resources) {
-    	bienestar = new Bienestar();
+		Chair c ;
+		for(String l : ad) {
+			for(int i =1;i<8;i++) {
+				c = new Chair(l+i);
+				for(int j=0;j<Function.persons.size();j++) {
+					if(!Function.persons.get(i).getChair().getIsEmpty()) {
+						
+					}
+				}
+			}
+		}
     }
     
     
@@ -276,9 +297,37 @@ public class ControllerSalaMini implements Initializable {
             }
             
             public void changeColorD7() {
-            d7.setOnMouseClicked(e -> { 
-                d7.setFill(Color.BLUE);
-            });
+            Chair c = new Chair("D7");
+	          if(!chairUsed(c)) {
+	            d7.setOnMouseClicked(e -> { 
+	                d7.setFill(Color.BLUE);
+	                p.setChair(c);
+	            });
+	           }
+            }
+            
+            public boolean chairUsed(Chair c) {
+            	boolean out=false;
+            	for(Person p :Function.persons) {
+            		if(p.getChair()==c) {
+            			if(p.getChair().getIsEmpty()) {
+            				out = true;
+            			}
+            		}
+            	}
+            	return out;
+            }
+            
+            public void changeColorIfUsed(Chair c) {
+            	if("A1".equals(c.getUbication())) {
+            		a7.setFill(Color.BLUE);
+            	}
+            	
+            }
+            
+            public void close() {
+            	Stage stage = (Stage)d7.getScene().getWindow();
+        		stage.close();
             }
 
 }
